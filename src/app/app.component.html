@@ -9,8 +9,8 @@
             <span
               *ngIf="!signOfType.get('userData.username').valid && signOfType.get('userData.username').touched"
               class="help-block">
-              <span *ngIf="signOfType.get('userData.username').errors['nameIsForbidden']">This name is invalid!</span>
-              <span *ngIf="signOfType.get('userData.username').errors['required']">This field is required!</span>
+              <span *ngIf="signOfType.get('userData.username').hasError('nameIsForbidden')">This name is invalid!</span>
+              <span *ngIf="signOfType.get('userData.username').hasError('required')">This field is required!</span>
             </span>
           </div>
           <div class="form-group">
@@ -19,8 +19,8 @@
             <span
               *ngIf="!signOfType.get('userData.email').valid && signOfType.get('userData.email').touched"
               class="help-block">
-              <span *ngIf="signOfType.get('userData.email').errors['emailIsForbidden']">This email is invalid!</span>
-              <span *ngIf="signOfType.get('userData.email').errors['required']">This field is required!</span>
+              <span *ngIf="signOfType.get('userData.email').hasError('emailIsForbidden')">This email is invalid!</span>
+              <span *ngIf="signOfType.get('userData.email').hasError('required')">This field is required!</span>
             </span>
           </div>
           <span class="help-block" *ngIf="!signOfType.get('userData').valid && signOfType.get('userData').touched">Data
